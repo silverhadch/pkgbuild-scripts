@@ -1,7 +1,7 @@
 #Maintainer : Mitchel Stewart <quackdoctech@gmail.com>
 
 pkgname=cosmic-edit-git
-pkgver=r403.07115fd
+pkgver=r409.cf433f7
 pkgrel=1
 pkgdesc="COSMIC Text Editor"
 arch=('x86_64')
@@ -16,11 +16,12 @@ makedepends=(
   'cargo'
   'git' 
   'just'
+  'makepkg-git-lfs-proto'
 )
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}" 'cosmic-text-editor')
 replaces=('cosmic-text-editor-git')
-source=('git+https://github.com/pop-os/cosmic-edit.git')
+source=('git-lfs+https://github.com/pop-os/cosmic-edit.git')
 sha256sums=('SKIP')
   
 pkgver(){

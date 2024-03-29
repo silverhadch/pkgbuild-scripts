@@ -1,0 +1,17 @@
+pkgbase = cosmic-applet-apps-menu-git
+	pkgdesc = cosmic-applet-apps-menu
+	pkgver = r8.2700391
+	pkgrel = 1
+	url = https://github.com/leb-kuchen/cosmic-applet-apps-menu.git
+	arch = x86_64
+	license = GPLv3
+	makedepends = cargo
+	makedepends = just
+	makedepends = git
+	makedepends = cmake
+	provides = cosmic-applet-apps-menu
+	conflicts = cosmic-applet-apps-menu
+	source = git+https://github.com/leb-kuchen/cosmic-applet-apps-menu.git
+	sha256sums = SKIP
+
+pkgname = cosmic-applet-apps-menu-git
