@@ -1,7 +1,7 @@
 #Maintainer : Mitchel Stewart <quackdoctech@gmail.com>
 
 pkgname=cosmic-files-git
-pkgver=r270.d80c358
+pkgver=r379.66cef47
 pkgrel=1
 pkgdesc='cosmic-files'
 arch=('x86_64')
@@ -22,7 +22,7 @@ pkgver() {
 
 build() {
     cd $srcdir/cosmic-files
-    cargo build --release --no-default-features --features "image/avif-decoder,desktop,wgpu"
+    cargo build --release --features "image/avif-decoder" 
 }
 
 package() {

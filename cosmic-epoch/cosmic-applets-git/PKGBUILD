@@ -1,7 +1,7 @@
 #Maintainer : Mitchel Stewart <quackdoctech@gmaiil.com>
 
 pkgname=cosmic-applets-git
-pkgver=r829.fefd60b
+pkgver=r1011.0c7083e
 pkgrel=1
 pkgdesc='cosmic-applets'
 arch=('x86_64')
@@ -18,6 +18,11 @@ sha256sums=('SKIP')
 pkgver() {
   cd "$srcdir/cosmic-applets"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+#cosmic applets uses fat LTO which takes a lot of resources and a lot of time to compile
+#replace lto fat with lto thin
+prepare() {
+  sed -i s/"fat"/"thin"/g $srcdir/cosmic-applets/Cargo.toml
 }
 
 build() {
