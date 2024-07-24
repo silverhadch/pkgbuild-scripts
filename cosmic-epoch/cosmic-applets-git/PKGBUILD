@@ -21,9 +21,9 @@ pkgver() {
 }
 #cosmic applets uses fat LTO which takes a lot of resources and a lot of time to compile
 #replace lto fat with lto thin
-prepare() {
-  sed -i s/"fat"/"thin"/g $srcdir/cosmic-applets/Cargo.toml
-}
+#prepare() {
+	#sed -i s/"fat"/"thin"/g $srcdir/cosmic-applets/Cargo.toml
+#}
 
 build() {
     cd $srcdir/cosmic-applets
