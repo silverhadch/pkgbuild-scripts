@@ -1,7 +1,8 @@
 #!/bin/bash
 # Will get the numbers of cpu cores for max power
 num_jobs=$(nproc)
-
+export MOLD_JOBS=1
+export CARGO_TARGET_DIR=/tmp/
 # List
 directories=(
   "cosmic-applets-git"
