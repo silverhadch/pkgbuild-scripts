@@ -1,4 +1,10 @@
 #!/bin/bash
+#the claening tmp with sudo would bring temporary damage to system since cleaning without root will ignore important stuuf
+# the tmp ram usage is important for build time optimazaton
+if [ "$(id -u)" -eq 0 ]; then
+    echo "Error: This script should not be run as root or with sudo."
+    exit 1
+fi
 # Will get the numbers of cpu cores for max power
 num_jobs=$(nproc)
 export MOLD_JOBS=1
