@@ -1,44 +1,30 @@
 #!/bin/bash
+# Will get the numbers of cpu cores for max power
+num_jobs=$(nproc)
 
-cd cosmic-applet-host
-paru -Ui
-cd ../
-cd cosmic-applets
-paru -Ui
-cd ../
-cd cosmic-applibrary
-paru -Ui
-cd ../
-cd cosmic-bg
-paru -Ui
-cd ../
-cd cosmic-comp
-paru -Ui
-cd ../
-cd cosmic-launcher
-paru -Ui
-cd ../
-cd cosmic-osd
-paru -Ui
-cd ../
-cd cosmic-panel
-paru -Ui
-cd ../
-cd cosmic-workspaces-epoch
-paru -Ui
-cd ../
-cd cosmic-session
-paru -Ui
-cd ../
-#cd iced-workspaces-applet
-#paru -Ui
-#cd ../
-#cd user-color-editor
-#paru -Ui
-#cd ../
-cd cosmic-settings-daemon
-paru -Ui
-cd ../
-cd xdg-desktop-portal-cosmic
-paru -Ui
+# List
+directories=(
+  "cosmic-applets-git"
+  "cosmic-applibrary-git"
+  "cosmic-bg-git"
+  "cosmic-comp-git"
+  "cosmic-launcher-git"
+  "cosmic-osd-git"
+  "cosmic-panel-git"
+  "cosmic-workspaces-epoch-git"
+  "cosmic-session-git"
+  "cosmic-settings-daemon-git"
+  "xdg-desktop-portal-cosmic-git"
+)
+
+# Iterate over each directory and run paru
+for dir in "${directories[@]}"; do
+  if [ -d "$dir" ]; then
+    cd "$dir"
+    paru --mflags="-j${num_jobs}" -Ui
+    cd ..
+  else
+    echo "Directory $dir does not exist."
+  fi
+done
 
