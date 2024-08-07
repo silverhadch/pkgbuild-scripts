@@ -44,7 +44,7 @@ packages=(
   "xdg-desktop-portal-cosmic-git"
   "cosmic-session-git"
 )
-
+git lfs install
 # Install AUR packages
 for pkg in "${packages[@]}"; do
   echo "Installing $pkg..."
