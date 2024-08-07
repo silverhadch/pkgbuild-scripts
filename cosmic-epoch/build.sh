@@ -24,8 +24,8 @@ packages=(
   "cosmic-applibrary-git"
   "cosmic-bg-git"
   "cosmic-comp-git"
-  "cosmic-edit-git"
   "cosmic-epoch-meta-git"
+  "cosmic-edit-git"
   "cosmic-files-git"
   "cosmic-greeter-git"
   "cosmic-launcher-git"
@@ -36,13 +36,13 @@ packages=(
   "cosmic-randr-git"
   "cosmic-reader-git"
   "cosmic-screenshot-git"
-  "cosmic-session-git"
-  "cosmic-settings-daemon-git"
   "cosmic-settings-git"
+  "cosmic-settings-daemon-git"
   "cosmic-store-git"
   "cosmic-term-git"
   "cosmic-workspaces-epoch-git"
   "xdg-desktop-portal-cosmic-git"
+  "cosmic-session-git"
 )
 
 # Install AUR packages
