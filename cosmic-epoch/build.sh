@@ -20,7 +20,7 @@ mkdir -p "$CARGO_TARGET_DIR"
 
 # List of AUR packages to install
 packages=(
-  "osmic-applets-git"
+  "cosmic-applets-git"
   "cosmic-applibrary-git"
   "cosmic-bg-git"
   "cosmic-comp-git"
