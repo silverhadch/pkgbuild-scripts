@@ -48,7 +48,7 @@ git lfs install
 # Install AUR packages
 for pkg in "${packages[@]}"; do
   echo "Installing $pkg..."
-  paru -S --noconfirm "$pkg"
+  paru -Ui --noconfirm "$pkg"
 done
 
 echo "Finishing install..."
