@@ -57,11 +57,6 @@ echo "Finishing install..."
 paru -S cosmic-session-git
 
 
-# Safe cleanup of /tmp
-echo "Cleaning up /tmp directory..."
-# Print a warning
-echo "Warning: This will delete all files in /tmp that are not protected."
-# Clear /tmp but keep important files
-find /tmp -mindepth 1 -maxdepth 1 ! -name 'important_file_or_directory' -exec rm -rf {} +
+
 
 echo "Done."
