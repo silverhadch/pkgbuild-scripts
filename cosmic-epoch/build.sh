@@ -30,9 +30,9 @@ packages=(
   "cosmic-notifications-git"
   "cosmic-osd-git"
   "cosmic-panel-git"
-  "cosmic-player-git"
+  #"cosmic-player-git"
   "cosmic-randr-git"
-  "cosmic-reader-git"
+  #"cosmic-reader-git"
   "cosmic-screenshot-git"
   "cosmic-settings-git"
   "cosmic-settings-daemon-git"
@@ -42,7 +42,7 @@ packages=(
   "cosmic-workspaces-epoch-git"
   "xdg-desktop-portal-cosmic-git"
   "cosmic-greeter-git"
-  "cosmic-session-git"
+  #"cosmic-session-git"
 )
 git lfs install
 # Install AUR packages
@@ -50,6 +50,10 @@ for pkg in "${packages[@]}"; do
   echo "Installing $pkg..."
   paru -S --noconfirm "$pkg"
 done
+
+echo "Finishing install..."
+paru -S cosmic-session-git
+
 
 # Safe cleanup of /tmp
 echo "Cleaning up /tmp directory..."
