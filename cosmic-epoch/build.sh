@@ -24,10 +24,8 @@ packages=(
   "cosmic-applibrary-git"
   "cosmic-bg-git"
   "cosmic-comp-git"
-  "cosmic-epoch-meta-git"
-  "cosmic-edit-git"
+  #"cosmic-epoch-meta-git"
   "cosmic-files-git"
-  "cosmic-greeter-git"
   "cosmic-launcher-git"
   "cosmic-notifications-git"
   "cosmic-osd-git"
@@ -40,8 +38,10 @@ packages=(
   "cosmic-settings-daemon-git"
   "cosmic-store-git"
   "cosmic-term-git"
+  "cosmic-edit-git"
   "cosmic-workspaces-epoch-git"
   "xdg-desktop-portal-cosmic-git"
+  "cosmic-greeter-git"
   "cosmic-session-git"
 )
 git lfs install
