@@ -49,14 +49,12 @@ git lfs install
 for pkg in "${packages[@]}"; do
   echo "Installing $pkg..."
   cd "$pkg"
-  paru -Ui --noconfirm "$pkg"
+  paru -Ui --noconfirm
   cd ..
 done
 
 echo "Finishing install..."
 paru -S cosmic-session-git
 
-
-
-
 echo "Done."
+
